@@ -3,7 +3,7 @@ function anaToVari(ana){
     return vori;
 
 }
-var countVori=anaToVari(32);
+var countVori=anaToVari(16);
 console.log(countVori)
 
 
