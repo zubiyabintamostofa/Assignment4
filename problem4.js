@@ -1,26 +1,22 @@
-
-function animalCount(miles){
-    const animalDensityFirst10miles=10;
-    const animalDensitySecond10miles=50;
-    const animalDensitySRestmiles=100;
-    if (miles<=10){
-        const count =miles*animalDensityFirst10miles;
-        return count;
+let oddFriend = ["abul", "kabul", "babul", "cabuls", "habul"];
+let selectFriend = [];
+function name(array) {
+  //Get value throw loop
+  for (let index = 0; index < array.length; index++) {
+    const elementLegth = array[index].length;
+    const element = array[index];
+    //Check word length
+    if (elementLegth % 2 != 0) {
+      selectFriend.push(element);
+      continue;
     }
-    else if( miles<=20){
-        const firstDenseAnimals=10*animalDensityFirst10miles;
-        const restmiles= miles-10;
-        const secondDenseAnimals=restmiles*animalDensitySecond10miles;
-        const totalAnimals=firstDenseAnimals+secondDenseAnimals;
-        return totalAnimals;
-    }
-    else {const firstDenseAnimals=10*animalDensityFirst10miles;
-        secondDenseAnimals=10*animalDensitySecond10miles;
-     const restmiles=miles-20;
-     const RestDenseAnimal=restmiles*animalDensitySRestmiles;
-     const totalAnimals=firstDenseAnimals+secondDenseAnimals+RestDenseAnimal;
-     return totalAnimals;
-    }
+  }
+  return selectFriend;
 }
-const animals=animalCount(25);
-console.log(animals);
+//Call Funcation
+let storeFriend = name(oddFriend);
+//Display Friend Name
+for (let index = 0; index < storeFriend.length; index++) {
+  const element = storeFriend[index];
+  console.log(element);
+}
